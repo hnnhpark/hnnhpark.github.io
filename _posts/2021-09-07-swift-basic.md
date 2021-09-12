@@ -13,19 +13,33 @@ toc_sticky: true
 date: 2021-09-07
 last_modified_at: 2021-09-07
 ---
+안녕하세요, iOS에 갓입문한 hnnh라고 합니다:) 저는 프로그래밍 경험은 있지만 swift는 처음 배우게 되어 각 문법의 기초 개념보다는 swift만이 가지고 있는 특징이나 문법을 빠르게 정리해보고 오래 기억하려는 목적으로 글을 작성하게 되었습니다. 
+
+이글은 아래 두 훌륭한 문서들을 참고하여 작성했습니다. 
+
+[Swift 공식 문서](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#)
+
+[야곰님의 Swift 블로그](https://yagom.github.io/swift_basic/)
+
+둘다 너무 좋은 자료이니 저같은 입문자분들 잘 활용하시길 바랄게요 ㅎㅎ!! 
+
+<br />
+<br />
+
 
 ## 변수와 상수 
 변수는 var, 상수는 let을 사용한다. 
-``` swift
+``` swift는 
 var sumCount = 0
 let PI = 3.14
 ```
-#
+---
+
 타입 추론이 어려운 경우 `var inputA: String = "abc"` 형태로 타입을 명시해 주어야 한다.  
 ``` swift 
 var input: String = "hello world"
 ```
-#
+---
 변수나 상수를 선언한 이후 초기화를 하려고 할때, 반드시 타입을 명시해 주어야 한다. swift에서는 상수의 선언과 초기화가 꼭 동시에 이루어지지 않아도 된다. 
 ``` swift
 let myName: String
@@ -48,7 +62,7 @@ var b: Float = 2
 // var c = a + b // 에러
 var c = a + Int(b) // 타입캐스팅을 해주어야 가능하다.
 ```
-#
+---
 ### String
 string의 각 character 접근하기 
 ``` swift
@@ -82,7 +96,7 @@ var someAny: Any
 someAny = "hello world"
 someAny = 10
 ```
-#
+---
 AnyObject는 어떤 클래스의 인스턴스든 저장할 수 있다.
 ```
 class truck {}
@@ -101,7 +115,7 @@ Optional은 타입뒤에 `?`를 붙여 나타내는데, 이는 "값이 있을 �
 var myAge: Int?
 myAge = nil 
 ```
-#
+---
 Optional은 원래 타입의 값을 opional로 포장wrap한 상태이다.
 ``` swift
 var optionalNum: Int? = 10
@@ -119,7 +133,7 @@ var b: Int? = 20
 * Forced unwrapping 
 * Optional binding(if문을 이용 / guard문을 이용)
 
-#
+---
 ### nil Coalescing operator : ??
 `a ?? b` : a에는 optional이 들어간다. optional에서 값을 추출하여, 값이 있다면 a의 값을 반환하고, 값이 없다면 즉, nil이라면 b를 반환하는 연산자이다.
 ``` swift
@@ -327,12 +341,85 @@ for (name, nickName) in nicknames {
 ```
 
 ## if 
-
-## for
-
-## while
+특별한 사항 없이 if, else if, else를 조합하여 사용하면 된다. 
+``` swift 
+let age = 15
+if age < 19 {
+  print("청소년입니다")
+} else {
+  print("성인입니다")
+}
+```
 
 ## switch 
+swift에서는 switch문에 break를 명시하지 않아도 기본적으로 각 case에 해당하는 코드를 실행 후 switch 문을 빠져나간다. 
+``` swift 
+var age = 5
+switch age {
+case 0..<8: // 0이상 8미만. 0<..8은 0초과 8이하
+    print("미취학아동")
+case 8..<14:
+    print("초등학생")
+case 15..<17:
+    print("중학생")
+case 17..<20:
+    print("고등학생")
+default:
+    print("성인")
+} // 출력: 미취학아동 
+```
+break를 무시하고 다른 case문도 실행하려면 fallthrough 키워드를 사용하면 된다.   
+``` swift 
+var age = 5
+switch age {
+case 0..<8:
+    print("미취학아동")
+    fallthrough
+case 8..<14:
+    print("초등학생")
+case 15..<17:
+    print("중학생")
+case 17..<20:
+    print("고등학생")
+default:
+    print("성인")
+} // 출력: 미취학아동 \n 초등학생 
+```
+case문에 `,`를 이용하는 것도 가능하다. 
+``` swift 
+var aage = 16
+switch aage {
+case 0..<8:
+    print("미취학아동")
+case 8..<14, 15..<17, 17..<20:
+    print("학생")
+default:
+    print("성인")
+}
+```
 
-## function
+## for 
+`for 요소 in 순회하고자 하는 대상` 의 간단한 문법이다. 
+``` swift 
+let nums = [1, 2, 3, 4, 5]
+for num in nums {
+  print(num)
+}
+```
 
+
+## while
+``` swift 
+var i = 0
+while i < 10 {
+  print(i)
+  i += 1
+} 
+// 0부터 9까지 출력 
+```
+
+
+## Function
+
+## Closure
+:> 작성중입니다
