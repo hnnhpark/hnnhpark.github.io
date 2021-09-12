@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 locale                   : "ko-KR"
 title                    : "hnnh의 개발 블로그"
 title_separator          : "-"
-subtitle                 : "IOS programming"
+subtitle                 : "iOS programming"
 name                     : "hnnh park"
 description              : "어려운 것은 모르는 것일뿐!"
 url                      : "https://hnnhpark.github.io"
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "hnnh park"
   avatar           : "/assets/images/pinksky.jpg"
-  bio              : "즐거운 IOS 개발자 hnnh입니다."
+  bio              : "즐거운 iOS 개발자 hnnh입니다."
   location         : "Republic of Korea"
   email            :
   links:
