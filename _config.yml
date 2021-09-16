@@ -105,11 +105,11 @@ author:
   avatar           : "/assets/images/pinksky.jpg"
   bio              : "즐거운 iOS 개발자 hnnh입니다."
   location         : "Republic of Korea"
-  email            :
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "hnnhhy.park@gmail.com"
+      url: mailto:hnnhhy.park@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/hnnhpark"
@@ -119,7 +119,7 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "hnnhhy.park@gmail.com"
+      url: mailto:hnnhhy.park@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/hnnhpark"
