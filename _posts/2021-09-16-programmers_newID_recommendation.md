@@ -84,14 +84,14 @@ func solution(_ new_id:String) -> String {
 - `str.lowercased()` 함수는 `str`에서 모든 대문자를 소문자로 바꾼 문자열을 반환한다. `isLetter`을 이용하여 숫자인지, 기호인지 문자인지 뭔지를 확인하지 않아도 된다. 알아서 대문자만 쏙쏙 골라서 소문자로 바꿔준다. 
 
 - `str.replacingOccurrences(of: "..", with: ".")`는 `str`에서 모든 `".."`을 `"."`으로 바꿔주는 함수이다. 이 문제에서 `while`문을 써야 하는 이유는 `str`이 가령 `"a....b"`라고 한다면 `str.replacingOccurrences(of: "..", with: ".")`의 결과값은 `ab`가 아니라 `a..b`이다. 따라서 모든 `..`가 대체되도록 하기 위해선`while`문을 이용해야 한다. 
-
 ``` swift 
 while newID.contains("..") {
         newID = newID.replacingOccurrences(of: "..", with: ".")
     }
 ```
+
 - `suffix`, `prefix` 접두사 접미사 관련 함수
-``` swift 
+```swift  
 var word = "green apple"
 word.prefix(1) // "g"
 word.suffix(1) // "e"
