@@ -9,6 +9,7 @@ tags:
 
 toc: true
 toc_sticky: true
+comments: true
  
 date: 2021-09-07
 last_modified_at: 2021-09-07
@@ -63,6 +64,7 @@ var b: Float = 2
 var c = a + Int(b) // 타입캐스팅을 해주어야 가능하다.
 ```
 ---
+
 ### String
 string의 각 character 접근하기 
 ``` swift
