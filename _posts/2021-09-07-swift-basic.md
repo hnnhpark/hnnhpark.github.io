@@ -356,7 +356,7 @@ swift에서는 switch문에 break를 명시하지 않아도 기본적으로 각 
 ``` swift 
 var age = 5
 switch age {
-case 0..<8: // 0이상 8미만. 0<..8은 0초과 8이하
+case 0..<8: // 0이상 8미만.
     print("미취학아동")
 case 8..<14:
     print("초등학생")
